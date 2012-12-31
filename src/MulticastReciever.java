@@ -19,9 +19,9 @@ public class MulticastReciever {
 
          public static void main(String[] args) throws Exception {
 
-                   
+                   System.out.println(args[0]);
 
-                   InetAddress receiveAddress =InetAddress.getByName(multicastHost);
+                   InetAddress receiveAddress =InetAddress.getByName(args[0]);
 
                    if(!receiveAddress.isMulticastAddress()){//测试是否为多播地址
 
@@ -41,7 +41,7 @@ public class MulticastReciever {
                    int sendport=dp.getPort();
                    
                    
-                   String destAddressStr = "224.0.0.1";
+                   String destAddressStr =args[0];
 
        	        int destPortInt = 9998;
 
